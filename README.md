@@ -25,6 +25,8 @@ My finial project for the class will be
 
 <iframe width="100%" height="800px" src="https://sbhs-gis.maps.arcgis.com/apps/Cascade/index.html?appid=393e30a3b4ed43c593f50c4c34fc4f22" frameborder="0" scrolling="yes"></iframe>
 
+
+
 <style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><small><a href="//sbhs-gis.maps.arcgis.com/apps/Embed/index.html?webmap=2097a8edb23b4c8ba0e633688d6fde85&amp;extent=-105.5212,20.9162,-62.4548,49.0349&zoom=true&scale=true&legendlayers=true&disable_scroll=true&theme=dark" style="color:#0000FF;text-align:left" target="_blank">View larger map</a></small><br><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Twitter Sentiment Map of Trump" src="//sbhs-gis.maps.arcgis.com/apps/Embed/index.html?webmap=2097a8edb23b4c8ba0e633688d6fde85&amp;extent=-105.5212,20.9162,-62.4548,49.0349&zoom=true&previewImage=false&scale=true&legendlayers=true&disable_scroll=true&theme=dark"></iframe></div>
 
 
