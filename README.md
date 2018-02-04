@@ -1,5 +1,5 @@
-# CS231n (Fall 2017 - present) 
-[CS231n]http://cs231n.stanford.edu/
+# [CS231n](http://cs231n.stanford.edu/) (Fall 2017 - present) 
+
 
 To be clear I am not offcially taking this class nor am I a student of Stanford. I am using the lectures and assignments which are provided  online for Free. 
 
