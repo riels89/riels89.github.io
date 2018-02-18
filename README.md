@@ -79,5 +79,5 @@ public void trainOne()
 ## Graphing Servlet (Winter 2017)
 #### [Github Repository](https://github.com/riels89/GraphingServlet)
 
-I created a Java servlet using Apache Tomcat that displays images of graphs that it created. The actual graphing part isn't very good and only exists so that I could put stuff in a database. It creates a graph and stores the points in a MySQL database. Another part of the program pulls the points and creates the image of the graph. It stores the image in the file stystem and the file path in the database. The servlet then pulls the file paths from the database, finds the files, then displays the images. 
+I created a Java servlet using Apache Tomcat that displays images of graphs that it created. The actual graphing part isn't very good and only exists so that I could put stuff in a database. It creates a graph and stores the points in a MySQL database. Another part of the program pulls the points and creates the image of the graph. It stores the image in the file system and the file path in the database. The servlet then pulls the file paths from the database, finds the files, then displays the images. 
 
