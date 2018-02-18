@@ -33,7 +33,7 @@ This map is showing the average twitter sentiment of Donald Trump across each st
 ## Java Neural Network on Iris Flower Dataset (Spring 2017)
 #### [Github Repository](https://github.com/riels89/IrisFlowerJavaNN)
 
-This was my first attempt at a machine learning project so I used a basic data set. The Iris flower dataset has sepal and pedal width and length the belong to 3 diffrent types of flowers. The neural network I trained had 2 layers and acheived about a 95% accuracy on average on the test data set. 
+This was my first attempt at a machine learning project so I used a basic data set. The Iris flower dataset has sepal and pedal width and length that belonged to 3 diffrent types of flowers. The neural network I trained had 2 layers and acheived about a 95% accuracy on average on the test data set. 
 ![NN](https://i.gyazo.com/f918bc03aed8c89d37f326b386f78d8f.png)
 
 (The size of the weights indicates its strength!)
