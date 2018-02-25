@@ -14,8 +14,8 @@ In this class you make and implement:
 * N-layer neural network with diffrent update models, batch normalization, and dropout
 * Convolutional Neural Nework
 * Neural Network using Tensorflow
-* RNN using Tensorflow
-* LSTM with Tensorflow
+* RNN for Image Captioning	
+* LSTM for Image Captioning
 * Style transfer network using Tensorflow
 * GAN using Tensorflow
 
