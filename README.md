@@ -19,7 +19,6 @@ In this class you make and implement:
 * Style transfer network using Tensorflow
 * GAN using Tensorflow
 
-My finial project for the class will be
 
 ## Twitter Sentiment Map (Fall 2017)
 #### [Github Repository](https://github.com/riels89/-Twitter-Sentiment-Map)
