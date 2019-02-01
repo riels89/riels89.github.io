@@ -17,6 +17,8 @@ function openTab(name, elmnt, color) {
 
   // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = color;
+  
+  window.location.replace("https://riels89.github.io/Research.md");
 }
 
 // Get the element with id="defaultOpen" and click on it
