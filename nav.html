@@ -1,21 +1,22 @@
-<!--Navigation bar-->
- 
-<script type="text/javascript" scr = "buttonJS.js"></script>
- 
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<script type="text/javascript" src="buttonJS.js"></script>
+
 <div id="Home" class="tabcontent">
-  <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-  <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+  <h1>Riley White's Github</h1>
 </div>
-          
+
 <div id="Research" class="tabcontent">
-   <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-   <h2 id="research_heading">{{site.reserach_heading}}</h2>
+  <h1>My Research</h1>
 </div>
-          
-<button class="tablink" onclick="openTab('Home', this, 'grey')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openTab('Reserach', this, 'blue')">Research</button>
 
-<!--end of Navigation bar-->
+<div id="Other_Projects" class="tabcontent">
+  <h1>Other Projects</h1>
+</div>
 
-
-
+<button class="tablink" onclick="openTab('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openTab('Research', this, 'green')">Research</button>
+<button class="tablink" onclick="openTab('Other_Projects', this, 'blue')">Other_Projects</button>
