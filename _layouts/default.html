@@ -7,18 +7,26 @@
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     
-    <!--Navigation bar-->
-      <div id="nav-placeholder">
-
-      </div>
-      <script>
-        $(function(){
-          $("#nav-placeholder").load("nav.html");
-        });
-       </script>
-    <!--end of Navigation bar-->
-  
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type="text/javascript" src="buttonJS.js"></script>
+
+    <div id="Home" class="tabcontent">
+      <h1>Riley White's Github</h1>
+    </div>
+
+    <div id="Research" class="tabcontent">
+      <h1>My Research</h1>
+    </div>
+
+    <div id="Other_Projects" class="tabcontent">
+      <h1>Other Projects</h1>
+    </div>
+
+    <button class="tablink" onclick="openTab('Home', this, 'red')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openTab('Research', this, 'green')">Research</button>
+    <button class="tablink" onclick="openTab('Other_Projects', this, 'blue')">Other_Projects</button>
+
 
 
     <!-- MAIN CONTENT -->
