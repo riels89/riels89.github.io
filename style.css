@@ -27,5 +27,5 @@
 }
 
 /* Style each tab content individually */ 
-#Home {background-color:red;hsl(90deg, 100%, 50%);}
-#Research {background-color:green;hsl(90deg, 50%, 50%);}
+#Home {background-color:hsl(90deg, 100%, 50%);}
+#Research {background-color:hsl(90deg, 50%, 50%);}
