@@ -9,6 +9,7 @@
   padding: 14px 16px;
   font-size: 17px;
   width: 25%;
+
 }
 
 /* Change background color of buttons on hover */
@@ -22,8 +23,9 @@
   display: none;
   padding: 50px;
   text-align: center;
+  
 }
 
 /* Style each tab content individually */ 
-#Home {background-color:red;}
-#Research {background-color:green;}
+#Home {background-color:red;hsl(90deg, 100%, 50%);}
+#Research {background-color:green;hsl(90deg, 100%, 50%);}
