@@ -29,8 +29,8 @@
       elmnt.style.backgroundColor = color;
     
        var converter = new Showdown.converter();
-       converter.makeHtml(name + ".md")
-       $("#main_content").load("home.html");
+       
+       $("#main_content").load(converter.makeHtml(name + ".md"));
    }
     </script>
 
