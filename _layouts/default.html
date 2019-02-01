@@ -33,9 +33,6 @@
 
       $("#main_content").load(name + ".md");
    }
-
-    // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
     </script>
 
     <div id="Home" class="tabcontent">
@@ -58,7 +55,9 @@
     <button class="tablink" onclick="openTab('Research', this, 'hsl(90deg, 50%, 50%)')">Research</button>
     <button class="tablink" onclick="openTab('Other_Projects', this, 'hsl(45deg, 50%, 50%)')">Other_Projects</button>
     <button class="tablink" onclick="openTab('Resume', this, 'hsl(25deg, 50%, 50%)')">Resume</button>
-
+    
+    <script> document.getElementById("defaultOpen").click(); </script>
+    
   </head>
 
     <!-- MAIN CONTENT -->
