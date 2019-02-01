@@ -29,10 +29,10 @@
       elmnt.style.backgroundColor = color;
     
        var markdownURL = name + ".md";
-        get(markdownURL, function(markdownContent) {
+        $.get(markdownURL, function(markdownContent) {
             var converter = new Markdown.Converter();
             var htmlContent = converter.makeHtml(markdownContent);
-            ("#main_content").html(htmlContent);
+            $("#main_content").html(htmlContent);
         });
    }
     </script>
