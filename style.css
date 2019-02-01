@@ -32,7 +32,7 @@
 #Other_Projects {background-color:hsl(45deg, 50%, 50%);}
 #Resume {background-color:hsl(25deg, 50%, 50%);}
 
-.content {
+.outer {
   max-width: 500px;
   margin: auto;
 }
