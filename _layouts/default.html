@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="showdownjs/dist/showdown.js"></script>
+
     
     <script>
     function openTab(name, elmnt, color) {
@@ -28,9 +28,7 @@
       // Add the specific color to the button used to open the tab content
       elmnt.style.backgroundColor = color;
     
-       var converter = new Showdown.converter();
-       
-       $("#main_content").load(converter.makeHtml(name + ".md"));
+       $("#main_content").load("html/"name + ".html");
    }
     </script>
 
