@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-
+   
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="http://code.google.com/p/pagedown/Markdown.Converter.js"></script>
+    <script type="text/javascript" src="showdownjs/dist/showdown.js"></script>
     
     <script>
     function openTab(name, elmnt, color) {
@@ -28,12 +28,9 @@
       // Add the specific color to the button used to open the tab content
       elmnt.style.backgroundColor = color;
     
-       var markdownURL = name + ".md";
-        $.get(markdownURL, function(markdownContent) {
-            var converter = new Markdown.Converter();
-            var htmlContent = converter.makeHtml(markdownContent);
-            $("#main_content").html(htmlContent);
-        });
+       var converter = new Showdown.converter();
+       
+       $("#main_content").load(converter.makeHtml(name + ".md"));
    }
     </script>
 
