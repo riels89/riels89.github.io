@@ -1,6 +1,6 @@
 <style>
 #background {
-  width: 800px;
+  width: 900px;
   height: 250px;
   background-color: lightgrey;
   color: black;
@@ -62,8 +62,8 @@ Coursework was done from the materials put online and without official enrollmen
 <p>(The size of the weights indicates its strength!)</p>
 
 <p>Here is the code snipet that gives you the basic idea of how I structured the NN.
-<div id='background'>
-<pre><code>
+
+<div id='background'><pre><code>
 public void trainOne()
     {
         currentInput = trainingData[dataIndex];
@@ -81,8 +81,8 @@ public void trainOne()
 </p>
 
 <p>Looking back on the code with what I know today I can easily spot mistakes. For example using a sigmoid function on the output neuron:
-<div id='background'>
-<pre><code>
+
+<div id='background'><pre><code>
  public double activate(double[] inputs)
     {
         netInput = dot(inputs, weights);
