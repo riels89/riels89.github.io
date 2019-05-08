@@ -13,7 +13,7 @@ This map is showing the average twitter sentiment of Donald Trump across each st
 
 ## Convolutional Neural Networks for Visual Recognition (Fall 2017-Spring 2018)
 ##### [Github Repository](https://github.com/riels89/CS231n)
-Went through this Stanford class on own time which is focused on deep learning and computer vision.  The class is using Python to achieve a deep understanding of how to create major algorithms like CNNs and LSTMs by hand.  From there the same algorithms are implemented in Tensorflow. Coursework was done from the materials put online and without official enrollment of the course.
+Went through this Stanford class on own time which is focused on deep learning and computer vision.  The class is using Python to achieve a deep understanding of how to create major algorithms like CNNs and LSTMs by hand. From there the same algorithms are implemented in Tensorflow. This class was very helpful to understanding all of the algorithms at a deeper level.
 
 Algorithms implemented:
 * K-nearest neighbor
@@ -27,3 +27,16 @@ Algorithms implemented:
 * LSTM
 * Saliency Maps
 * Style Transfer
+
+Coursework was done from the materials put online and without official enrollment of the course.
+
+## Neural Network on Iris Flower Dataset (Spring 2017)
+##### [Github Repository](https://github.com/riels89/IrisFlowerJavaNN)
+
+Created a simple two-layer neural network from scratch in java for my AP computer science class' final project. Used the infamous Iris dataset containing data of sepal and pedal width and length belonging to 3 types of flowers. 
+
+## Graphing Servlet (Fall 2016)
+##### [Github Repository](https://github.com/riels89/GraphingServlet)
+
+This graphing servlet is not very good at graphing and will break if you attempt to put in complicated functions.
+It was mostly made to show the creation of a servlet, the use of a database, and to use images in a servlet with Java.
