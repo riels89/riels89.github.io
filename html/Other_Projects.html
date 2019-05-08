@@ -64,11 +64,10 @@ Coursework was done from the materials put online and without official enrollmen
 <p>Here is the code snipet that gives you the basic idea of how I structured the NN.
 
 <div id='background'><pre><code>
-public void trainOne()
-    {
-        currentInput = trainingData[dataIndex];
-        forwardPropagate();
-        backPropagate();</p>
+public void trainOne() {
+    currentInput = trainingData[dataIndex];
+    forwardPropagate();
+    backPropagate();</p>
     last200.add(wasRight(trainingAnswers[dataIndex]));
     if (last200.size() &gt; 200)
         last200.remove(0);
