@@ -11,32 +11,73 @@ This map is showing the average twitter sentiment of Donald Trump across each st
 
 
 
-## Convolutional Neural Networks for Visual Recognition (Fall 2017-Spring 2018)
-##### [Github Repository](https://github.com/riels89/CS231n)
-Went through this Stanford class on own time which is focused on deep learning and computer vision.  The class is using Python to achieve a deep understanding of how to create major algorithms like CNNs and LSTMs by hand. From there the same algorithms are implemented in Tensorflow. This class was very helpful to understanding all of the algorithms at a deeper level.
+## [CS231n](http://cs231n.stanford.edu/) (Fall 2017 - present) 
+#### [Github Repository](https://github.com/riels89/CS231n)
 
-Algorithms implemented:
-* K-nearest neighbor
-* SVM
-* Softmax classifier
-* Two layer Neural Network
-* Batch Normalization
-* Dropout
-* CNN
-* Vanilla RNN
-* LSTM
-* Saliency Maps
-* Style Transfer
+To be clear I am not offcially taking this class nor am I a student of Stanford. I am using the lectures and assignments which are provided  online for Free. 
 
+I am using the Spring 2017 version (future iterations of the class will be diffrent)
+
+In this class you make and implement:
+
+* K nearest neighbor
+* Linear SVM
+* Softmax Classifier
+* Two-layer neural network
+* N-layer neural network with diffrent update models, batch normalization, and dropout
+* Convolutional Neural Nework
+* Neural Network using Tensorflow
+* RNN for Image Captioning	
+* LSTM for Image Captioning
+* Style transfer network using Tensorflow
 Coursework was done from the materials put online and without official enrollment of the course.
 
-## Neural Network on Iris Flower Dataset (Spring 2017)
-##### [Github Repository](https://github.com/riels89/IrisFlowerJavaNN)
+## Java Neural Network on Iris Flower Dataset (Spring 2017)
+#### [Github Repository](https://github.com/riels89/IrisFlowerJavaNN)
 
-Created a simple two-layer neural network from scratch in java for my AP computer science class' final project. Used the infamous Iris dataset containing data of sepal and pedal width and length belonging to 3 types of flowers. 
+This was my first attempt at a machine learning project so I used a basic data set. The Iris flower dataset has sepal and pedal width and length that belonged to 3 diffrent types of flowers. The neural network I trained had 2 layers and acheived about a 95% accuracy on average on the test data set. 
+![NN](https://i.gyazo.com/f918bc03aed8c89d37f326b386f78d8f.png)
 
-## Graphing Servlet (Fall 2016)
-##### [Github Repository](https://github.com/riels89/GraphingServlet)
+(The size of the weights indicates its strength!)
 
-This graphing servlet is not very good at graphing and will break if you attempt to put in complicated functions.
-It was mostly made to show the creation of a servlet, the use of a database, and to use images in a servlet with Java.
+Here is the code snipet that gives you the basic idea of how I structured the NN.
+```Java
+public void trainOne()
+	{
+		currentInput = trainingData[dataIndex];
+		forwardPropagate();
+		backPropagate();
+		
+		last200.add(wasRight(trainingAnswers[dataIndex]));
+		if (last200.size() > 200)
+			last200.remove(0);
+		
+		dataIndex++;
+		if(dataIndex>=trainingData.length)
+			dataIndex=0;
+	}
+ ```
+ 
+ Looking back on the code with what I know today I can easily spot mistakes. For example using a sigmoid function on the output neuron:
+ ```Java
+ public double activate(double[] inputs)
+	{
+		netInput = dot(inputs, weights);
+		switch(AF)
+		{
+			case  SIGMOID:
+				output = sigmoid(netInput);
+				break;
+			case ReLU:
+				output = Math.max(0, netInput);
+				break;
+		}
+		deltaOutput = output * (1-output);
+		return output;
+	}
+  ```
+
+## Graphing Servlet (Winter 2017)
+#### [Github Repository](https://github.com/riels89/GraphingServlet)
+
+I created a Java servlet using Apache Tomcat that displays images of graphs that it created. The actual graphing part isn't very good and only exists so that I could put stuff in a database. It creates a graph and stores the points in a MySQL database. Another part of the program pulls the points and creates the image of the graph. It stores the image in the file system and the file path in the database. The servlet then pulls the file paths from the database, finds the files, then displays the images. 
