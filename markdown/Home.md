@@ -1,10 +1,5 @@
 ## Riley White's Github
 #
-I'm a High school student who has self-taught myself programming and has a passion for ML/AI. Currently an intern at boodleAI where I am working on a recommendation engine to help non-profits raise more money. I also enjoy doing AI research and hope to do more in the future, especially in college. 
+I'm a High school student at Stone Bridge in VA who has self-taught myself programming and has a passion for ML/AI. Currently an intern at BoodleAI where I am working on a recommendation engine to help non-profits raise more money. I also enjoy doing AI research and hope to do more in the future, especially in college. I am especially intrested in computer vison partly because it has such broad applications and honestly it is just kinda cool. 
 
-#### My passion for AI/ML
-My passion for AI came from a late night Youtube binge where I came across these really cool videos about machine learning. They kept saying how this technology will change the world and how it might someday create the first sentient AI. Naturally, as a 16-something teenager that sounded kinda cool, I mean which 16-year-old boy wouldn't want to make Skynet? 
-
-Well rather than an easy gradual introduction into the field by starting with some of the more simple algorithms I threw myself head first into deep learning. So, the first machine learning project I ever did was creating a neural network... from scratch... in Java. At the time Java was really the only language I knew, and I wanted to use it as my final project for my AP computer science class which was based in Java. Needless to say, that was quite the adventure, especially considering I was still in the middle of pre-calc so most of the math was completely over my head. 
-
-I went on to continue learning as much as I could which lead me bouncing all over the internet looking for a good source to learn things. I found a Stanford grad course where they posted all of their lectures and assignments online which was centered around computer vision. So I went through and did the assignments and watched the lectures. This gave me the knowledge to be able to do my current research project. 
+Email: rileywhite89@gmail.com
