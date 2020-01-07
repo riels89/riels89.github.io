@@ -1,4 +1,34 @@
 
+## Self Attention Implementation
+##### [Github Repository](https://github.com/riels89/Attention)
+I implemented single headed self attention in tensorflow to gain a better understanding of what was happening. 
+This is the meat of the code:
+```
+def transformer(self, X):
+
+# X = (n, t, 512)
+# (n, t, 64)
+Q = tf.matmul(X, tf.random.uniform([self.embedding_size, self.attention_size]))
+K = tf.matmul(X, tf.random.uniform([self.embedding_size, self.attention_size]))
+V = tf.matmul(X, tf.random.uniform([self.embedding_size, self.attention_size]))
+
+# (n, t, 64) * (n, t, 64).T = (n, t, n, t)
+score = tf.matmul(Q, tf.transpose(K))
+
+softmax = tf.nn.softmax(tf.divide(score, np.sqrt(self.attention_size)), axis=-1)
+
+value_vec = tf.matmul(softmax, V)
+
+return value_vec
+```
+## [CS229](http://cs229.stanford.edu/) (Fall 2017 - present) 
+
+To be clear I am not offcially taking this class nor am I a student of Stanford. I am using the lectures and assignments which are provided  online for Free. 
+
+**Course Description (pulled from class website)** This course provides a broad introduction to machine learning and statistical pattern recognition. Topics include: supervised learning (generative/discriminative learning, parametric/non-parametric learning, neural networks, support vector machines); unsupervised learning (clustering, dimensionality reduction, kernel methods); learning theory (bias/variance tradeoffs, practical advice); reinforcement learning and adaptive control. The course will also discuss recent applications of machine learning, such as to robotic control, data mining, autonomous navigation, bioinformatics, speech recognition, and text and web data processing.
+
+[Syllabus](http://cs229.stanford.edu/syllabus.html)
+
 ## Twitter Sentiment Map (Fall 2017)
 ##### [Github Repository](https://github.com/riels89/-Twitter-Sentiment-Map)
 
@@ -12,7 +42,7 @@ This map is showing the average twitter sentiment of Donald Trump across each st
 
 
 ## [CS231n](http://cs231n.stanford.edu/) (Fall 2017 - present) 
-#### [Github Repository](https://github.com/riels89/CS231n)
+#### [Github Repository](https://github.com/riels89/CS231n) (It has not been updated with the finished work)
 
 To be clear I am not offcially taking this class nor am I a student of Stanford. I am using the lectures and assignments which are provided  online for Free. 
 
