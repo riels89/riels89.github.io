@@ -7,20 +7,23 @@ This is the meat of the code:</p>
 
 <pre><code>&lt;span class="hljs-function"&gt;&lt;span class="hljs-keyword"&gt;def&lt;/span&gt; &lt;span class="hljs-title"&gt;transformer&lt;/span&gt;&lt;span class="hljs-params"&gt;(&lt;span class="hljs-keyword"&gt;self&lt;/span&gt;, X)&lt;/span&gt;&lt;/span&gt;:
 
-&lt;span class="hljs-comment"&gt;# X = (n, t, 512)&lt;/span&gt;
-&lt;span class="hljs-comment"&gt;# (n, t, 64)&lt;/span&gt;
-Q = tf.matmul(X, tf.random.uniform([&lt;span class="hljs-keyword"&gt;self&lt;/span&gt;.embedding_size, &lt;span class="hljs-keyword"&gt;self&lt;/span&gt;.attention_size]))
-K = tf.matmul(X, tf.random.uniform([&lt;span class="hljs-keyword"&gt;self&lt;/span&gt;.embedding_size, &lt;span class="hljs-keyword"&gt;self&lt;/span&gt;.attention_size]))
-V = tf.matmul(X, tf.random.uniform([&lt;span class="hljs-keyword"&gt;self&lt;/span&gt;.embedding_size, &lt;span class="hljs-keyword"&gt;self&lt;/span&gt;.attention_size]))
+    def transformer(self, X):
+        # X = (n, t, 512)
+        # (n, t, 64)
+        Q = tf.matmul(X, tf.random.uniform([self.embedding_size, self.attention_size]))
+        K = tf.matmul(X, tf.random.uniform([self.embedding_size, self.attention_size]))
+        V = tf.matmul(X, tf.random.uniform([self.embedding_size, self.attention_size]))
 
-&lt;span class="hljs-comment"&gt;# (n, t, 64) * (n, t, 64).T = (n, t, n, t)&lt;/span&gt;
-score = tf.matmul(Q, tf.transpose(K))
+        # (n, t, 64) * (n, t, 64).T = (n, t, n, t)
+        score = tf.matmul(Q, tf.transpose(K))
 
-softmax = tf.nn.softmax(tf.divide(score, np.sqrt(&lt;span class="hljs-keyword"&gt;self&lt;/span&gt;.attention_size)), axis=-&lt;span class="hljs-number"&gt;1&lt;/span&gt;)
 
-value_vec = tf.matmul(softmax, V)
+        softmax = tf.nn.softmax(tf.divide(score, np.sqrt(self.attention_size)), axis=-1)
 
-&lt;span class="hljs-keyword"&gt;return&lt;/span&gt; value_vec
+        value_vec = tf.matmul(softmax, V)
+
+        return value_vec
+        
 </code></pre>
 
 <h2 id="-cs229-http-cs229-stanford-edu-fall-2017-present-"><a href="http://cs229.stanford.edu/">CS229</a> (Fall 2017 - present)</h2>
@@ -77,38 +80,37 @@ Coursework was done from the materials put online and without official enrollmen
 <p>Here is the code snipet that gives you the basic idea of how I structured the NN.</p>
 
 <pre><code class="lang-Java">&lt;span class="hljs-function"&gt;&lt;span class="hljs-keyword"&gt;public&lt;/span&gt; &lt;span class="hljs-keyword"&gt;void&lt;/span&gt; &lt;span class="hljs-title"&gt;trainOne&lt;/span&gt;(&lt;span class="hljs-params"&gt;&lt;/span&gt;)
-    &lt;/span&gt;{
-        currentInput = trainingData[dataIndex];
-        forwardPropagate();
-        backPropagate();
-
-        last200.&lt;span class="hljs-keyword"&gt;add&lt;/span&gt;(wasRight(trainingAnswers[dataIndex]));
-        &lt;span class="hljs-keyword"&gt;if&lt;/span&gt; (last200.size() &amp;gt; &lt;span class="hljs-number"&gt;200&lt;/span&gt;)
-            last200.&lt;span class="hljs-keyword"&gt;remove&lt;/span&gt;(&lt;span class="hljs-number"&gt;0&lt;/span&gt;);
-
-        dataIndex++;
-        &lt;span class="hljs-keyword"&gt;if&lt;/span&gt;(dataIndex&amp;gt;=trainingData.length)
-            dataIndex=&lt;span class="hljs-number"&gt;0&lt;/span&gt;;
-    }
+    public void trainOne() {
+		currentInput = trainingData[dataIndex];
+		forwardPropagate();
+		backPropagate();
+		
+		last200.add(wasRight(trainingAnswers[dataIndex]));
+		if (last200.size() > 200)
+			last200.remove(0);
+		
+		dataIndex++;
+		if(dataIndex>=trainingData.length)
+			dataIndex=0;
+	}
 </code></pre>
 
 <p> Looking back on the code with what I know today I can easily spot mistakes. For example using a sigmoid function on the output neuron:</p>
 
 <pre><code class="lang-Java"> &lt;span class="hljs-keyword"&gt;public&lt;/span&gt; &lt;span class="hljs-function"&gt;&lt;span class="hljs-keyword"&gt;double&lt;/span&gt; &lt;span class="hljs-title"&gt;activate&lt;/span&gt;&lt;span class="hljs-params"&gt;(&lt;span class="hljs-keyword"&gt;double&lt;/span&gt;[] inputs)&lt;/span&gt;
-    &lt;/span&gt;{
-        netInput = dot(inputs, weights);
-        &lt;span class="hljs-keyword"&gt;switch&lt;/span&gt;(AF)
-        {
-            &lt;span class="hljs-keyword"&gt;case&lt;/span&gt;  SIGMOID:
-                output = sigmoid(netInput);
-                &lt;span class="hljs-keyword"&gt;break&lt;/span&gt;;
-            &lt;span class="hljs-keyword"&gt;case&lt;/span&gt; ReLU:
-                output = Math.max(0, netInput);
-                &lt;span class="hljs-keyword"&gt;break&lt;/span&gt;;
-        }
-        deltaOutput = output * (&lt;span class="hljs-number"&gt;1&lt;/span&gt;-output);
-        &lt;span class="hljs-keyword"&gt;return&lt;/span&gt; output;
-    }
+ public double activate(double[] inputs) {
+		netInput = dot(inputs, weights);
+		switch(AF) {
+			case  SIGMOID:
+				output = sigmoid(netInput);
+				break;
+			case ReLU:
+				output = Math.max(0, netInput);
+				break;
+		}
+		deltaOutput = output * (1-output);
+		return output;
+	}
 </code></pre>
 
 <h2 id="graphing-servlet-winter-2017-">Graphing Servlet (Winter 2017)</h2>
