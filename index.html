@@ -24,9 +24,9 @@
         tablinks[i].style.backgroundColor = "";
      }
       // Show the specific tab content
-      document.getElementById(name).style = "display: block; background-color:"+color>
+      document.getElementById(name).style.display = "block";
       // Add the specific color to the button used to open the tab content
-      // elmnt.style.backgroundColor = color;
+      elmnt.style.backgroundColor = color;
     
       $("#main_content").load("html/" + name + ".html");
    }
@@ -51,7 +51,7 @@
     <button class="tablink" onclick="openTab('Home', this, 'hsl(180deg, 50%, 50%)')" id="defaultOpen">Home</button>
     <button class="tablink" onclick="openTab('Research', this, 'hsl(90deg, 50%, 50%)')">Research</button>
     <button class="tablink" onclick="openTab('Other_Projects', this, 'hsl(45deg, 50%, 50%)')">Other Projects</button>
-    <button class="tablink" onclick="openTab('Awards', this, 'hsl(25deg, 50%, 50%)')">Awards</button>
+    <button class="tablink" onclick="openTab('Awards', this, 'hsl(30deg, 50%, 50%)')">Awards</button>
     
     
   </head>
